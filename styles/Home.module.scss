@@ -1,0 +1,28 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.textH4{
+  color: green;
+}
+
+.textHeader{
+  color: inherit;
+}
+
+.card {
+  width: 180px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(16, 158, 52);
+  box-shadow: 15px 15px  rgb(37, 158, 73, 0.5);
+}
+
+.mainTag {
+  padding: 0 70px;
+}
