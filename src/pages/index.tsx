@@ -26,6 +26,9 @@ export default function Home({ product }: productProps) {
         <h1 className={styles.textHeader}>
           ola
         </h1>
+        <button className={styles.closeButton}>
+          <img src="closeIcon.png" className={styles.closeImage}/>
+        </button>
       </div>
     </div>
     <main className={styles.mainTag}>
@@ -43,7 +46,6 @@ export const getServerSideProps: GetServerSideProps = async () =>{
     expand: ['product']
   })
   const infoProduct = await stripe.products.retrieve('prod_KKBatjJwuU8UoB')
-
   const product = {
     id: priceProduct.id,
     price: priceProduct.unit_amount / 100,
