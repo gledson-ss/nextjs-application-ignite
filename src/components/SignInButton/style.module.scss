@@ -1,0 +1,15 @@
+.signInButton {
+  width: 200px;
+  height: 30px;
+  border: none;
+  border-radius: 7px;
+  background-color: rgba(212, 60, 0, 1);
+  color: white;
+  outline: none;
+
+  &:hover{
+    filter: opacity(80%);
+    cursor: pointer;
+  }
+  transition: filter 0.2s ease-in-out;
+}

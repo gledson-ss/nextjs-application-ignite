@@ -3,7 +3,8 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.scss'
 import Image from 'next/image'
 import { stripe } from '../services/stripe'
-
+import { SignInButton } from '../components/SignInButton'
+import { useSession } from 'next-auth/client'
 interface productProps { 
   product:{
     id: number;
@@ -15,7 +16,7 @@ interface productProps {
 }
 
 export default function Home({ product }: productProps) {
-  
+  const [session] = useSession()
   return (
     <>
     <Head>
@@ -24,12 +25,13 @@ export default function Home({ product }: productProps) {
     <div className={styles.header}>
       <div className={styles.textH4}>
         <h1 className={styles.textHeader}>
-          ola
+          ola {session && session.user.name}
         </h1>
         <button className={styles.closeButton}>
           <img src="closeIcon.png" className={styles.closeImage}/>
         </button>
       </div>
+      <SignInButton />
     </div>
     <main className={styles.mainTag}>
       <div className={styles.card}>

@@ -8,7 +8,7 @@ const api = (req: NextApiRequest, res: NextApiResponse) =>{
     }
     
     return res.status(200).json({
-        id: 1,
+        id: req.query.id,
         value: 'hello api'
     })
 }
